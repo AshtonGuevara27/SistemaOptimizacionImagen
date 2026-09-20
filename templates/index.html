@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Optimizador de Imagenes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Subir y Optimizar Imagen</h2>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data" onsubmit="return validarFormulario()">
+            <label>Nombre completo</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label>Correo electronico</label>
+            <input type="text" id="correo" name="correo">
+
+            <label>Selecciona una imagen</label>
+            <input type="file" id="imagen" name="imagen">
+
+            <br>
+            <button type="submit">Optimizar imagen</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

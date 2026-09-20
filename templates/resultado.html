@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h2>Imagen procesada correctamente</h2>
+    <p>Gracias, {{ nombre }} ({{ correo }})</p>
+
+    <div class="comparacion">
+        <div class="caja">
+            <h3>Original</h3>
+            <img src="{{ url_for('static', filename='uploads/' + imagen_original) }}">
+        </div>
+        <div class="caja">
+            <h3>Optimizada</h3>
+            <img src="{{ url_for('static', filename='uploads/' + imagen_optimizada) }}">
+        </div>
+    </div>
+
+    <br>
+    <a href="/">Subir otra imagen</a>
+
+</body>
+</html>
